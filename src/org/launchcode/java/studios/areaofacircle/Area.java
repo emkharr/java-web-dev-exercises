@@ -1,5 +1,6 @@
 package org.launchcode.java.studios.areaofacircle;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Area {
@@ -14,6 +15,14 @@ public class Area {
 
         System.out.println("Enter a radius:");
         Double radius = input.nextDouble();
+        if (radius <= 0) {
+            System.err.println("Error");
+            System.exit(0);
+        }
+//        while (radius <=0 || !input.match("\\d*[.]\\d+") || !input.match("\\d+")){
+//            System.out.println("Error. Enter a radius: ");
+//            radius = input.nextDouble();
+//        };
         input.close();
 
 
